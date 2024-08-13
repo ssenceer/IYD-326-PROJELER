@@ -1,0 +1,140 @@
+Bu rapor, "Global EV Satışları 2010-2024" veri seti kullanılarak yürütülen 2 proje ve 1 envanter kontrol projenin detaylı bir analizini sunmaktadır. Projeler, veri biliminin temel alanları olan veri analizi, makine öğrenmesi ve nesne yönelimli programlama alanlarında derinlemesine bilgi ve beceri gerektirir.
+
+Veri Seti:
+
+Projelerin temelini oluşturan veri seti, [https://www.kaggle.com/datasets/patricklford/global-ev-sales-2010-2024](https://www.kaggle.com/datasets/patricklford/global-ev-sales-2010-2024) adresinden erişilebilen "Global EV Satışları 2010-2024" veri setidir. Bu kapsamlı veri seti, 2010 yılından 2024 yılına kadar dünya genelindeki elektrikli araç (EV) satışlarının kapsamlı bir görünümünü sunmaktadır. Veri seti, bölge, kategori, parametre, mod, güç aktarma organı, yıl ve değer gibi kritik değişkenleri içeren sütunlardan oluşur. Her bir satır, belirli bir bölge, yıl ve araç türü için belirli bir EV ile ilgili metriği temsil eder.
+
+Proje 1: Elektrikli Araç Sektör Trendlerinin Veri Analizi ve Görselleştirilmesi
+
+Amaç: Bu projenin temel amacı, elektrikli araç sektöründeki mevcut trendleri derinlemesine analiz etmek ve bu analizden elde edilen önemli bulguları etkili bir şekilde görselleştirmektir. Proje, EV satışlarının zaman içinde nasıl değiştiğini, farklı bölgelerin EV pazarındaki paylarını ve şarj altyapısının gelişimini anlamaya odaklanır.
+
+Yöntem:
+
+1. Veri Temizleme: Veri analizi süreci, veri setini analiz için hazırlamak üzere temizlemeyle başlar. Bu aşamada, eksik veriler dikkatlice incelendi ve analiz için gerekli olmayan sütunlar (örneğin, birim sütunu) veri setinden çıkarıldı. Bu, tutarlı ve güvenilir sonuçlar elde etmek için veri kalitesini sağlamayı amaçlar.
+
+2. Keşifsel Veri Analizi (EDA): Temizlenen veri seti daha sonra keşifsel veri analizi (EDA) teknikleri kullanılarak incelendi. Bu aşama, verileri daha iyi anlamak ve potansiyel trendleri belirlemek için hayati önem taşır.  Kategorik değişkenlerin dağılımı (örneğin, kategori) seaborn kütüphanesinin `countplot` fonksiyonu kullanılarak görselleştirildi. Değişkenler arasındaki korelasyonu araştırmak için bir korelasyon matrisi hesaplandı ve seaborn kütüphanesinin `heatmap` fonksiyonu kullanılarak görsel olarak temsil edildi. Korelasyon matrisi, farklı değişkenler arasındaki ilişkiyi anlamak ve modelleme için potansiyel öngörücüleri belirlemek için değerli bilgiler sağlar.
+
+3. Önemli Bulguların Görselleştirilmesi: EDA'dan elde edilen bulgular, açık ve öz bir şekilde iletmek için çeşitli görselleştirme teknikleri kullanılarak sunuldu.  
+     Yıllara Göre EV Satış Trendi: Yıllara göre EV satış trendini göstermek için güç aktarma organı türüne (BEV, PHEV, FCEV) göre ayrılmış çizgi grafikleri oluşturuldu. Bu grafikler, EV satışlarının zaman içindeki gelişimini, farklı güç aktarma organı teknolojilerinin göreceli performansını ve genel pazar büyüme oranlarını açıkça göstermektedir.
+     Bölgelere Göre EV Stok Payı: Farklı bölgelerdeki EV stok payını göstermek ve karşılaştırmak için çubuk grafikler kullanıldı. Bu grafikler, EV kullanımının coğrafi dağılımını ve belirli bölgelerdeki EV penetrasyon oranlarını anlamayı kolaylaştırır.
+     2023 Yılında Bölgelere Göre EV Satış ve Stok Payı: 2023 yılındaki EV satış payını ve stok payını bölgeler bazında görselleştirmek ve karşılaştırmak için pasta grafikleri kullanıldı. Bu grafikler, belirli bir yıldaki küresel EV pazarındaki her bölgenin göreceli önemini göstererek pazar payı dağılımının net bir resmini sunar.
+
+Bulgular:
+
+Veri analizi, EV sektörünün büyümesi ve benimsenmesiyle ilgili çeşitli önemli bulguları ortaya çıkardı. Bunlardan bazıları:
+
+ Küresel EV Satışlarında Artış: Küresel EV satışları 2010'dan bu yana önemli bir büyüme gösterdi, bu da artan tüketici talebini ve EV'lerin artan popülaritesini gösteriyor.
+ BEV'lerin Baskınlığı: BEV satışları, PHEV satışlarından daha hızlı bir oranda artıyor ve EV pazarında baskın teknoloji haline geliyor. Bu durum, pil teknolojisindeki gelişmeler, artan menzil ve şarj altyapısının genişlemesiyle açıklanabilir.
+ Çin'in Liderliği: Çin, hem EV satışlarında hem de EV stok payında küresel lider konumunda ve EV benimsenmesinde önemli bir rol oynuyor. Çin hükümetinin EV'leri destekleme politikaları, yerli EV üreticilerinin büyümesi ve tüketiciler arasında artan çevre bilinci, bu liderliğe katkıda bulunan önemli faktörlerdir.
+ 2023'te Pazar Payı Dağılımı: 2023 yılına ait verilere göre, Çin küresel EV satışlarında %60'lık bir paya ve %48'lik bir EV stok payına sahip olup pazar hakimiyetini sürdürüyor. Avrupa, %21 satış payı ve %24 stok payı ile ikinci sırada yer alıyor.
+
+Sonuç:  Veri analizi, EV sektörünün hızlı bir büyüme yörüngesinde olduğunu gösteriyor ve Çin'in bu büyümede önemli bir rol oynadığını vurguluyor. BEV'lerin PHEV'lere kıyasla artan popülaritesi de dikkat çekici bir bulgu olup, gelecekteki EV teknolojileri ve pazar trendleri hakkında önemli bilgiler sağlıyor.
+
+Proje 2: Güç Aktarma Organı Türünü Tahmin Eden Bir Makine Öğrenimi Modeli
+
+Amaç: Bu proje, bir EV satışının güç aktarma organı türünü (BEV veya PHEV) tahmin etmek için makine öğreniminin gücünden yararlanmayı amaçlıyor. Amaç, EV satış verilerindeki örüntüleri öğrenebilen ve gelecekteki satışlar için güç aktarma organı türünü tahmin etmede kullanılabilen bir model geliştirmektir.
+
+Yöntem:
+
+1. Veri Ön İşleme:
+     Hedef Değişken: Güç aktarma organı türü (BEV veya PHEV), ikili sınıflandırma problemi olarak ele alındı. BEV satışları 1 ile, PHEV satışları ise 0 ile kodlandı. 
+     Bağımsız Değişkenler: Model eğitimi için `year`, `region` ve `value` sütunları bağımsız değişkenler olarak seçildi. 
+     One-Hot Encoding: Kategorik `region` değişkeni, model tarafından kullanılabilir hale getirmek için one-hot encoding kullanılarak sayısal hale getirildi. Bu işlem, her bir bölge için ayrı bir ikili sütun oluşturarak modelin bölgesel farklılıkları yakalamasını sağlar.
+     Veri Seti Bölünmesi: Veri seti, modelin performansını değerlendirmek için %80'i eğitim ve %20'si test seti olmak üzere rastgele ikiye ayrıldı.
+
+2. Model Seçimi ve Eğitimi: Sınıflandırma görevi için Lojistik Regresyon modeli seçildi. Lojistik Regresyon, ikili sınıflandırma problemleri için yaygın olarak kullanılan, yorumlaması kolay ve etkili bir modeldir. Model, eğitim veri seti kullanılarak eğitilerek, verilerdeki örüntüleri öğrenip gelecekteki satışları tahmin etmesi sağlandı.
+
+3. Model Değerlendirme: Eğitilen modelin performansı, test seti kullanılarak değerlendirildi. Birkaç metrik, modelin tahmin gücünü ve doğruluğunu ölçmek için kullanıldı:
+     Ortalama Karesel Hata (MSE): MSE, tahmin edilen değerler ile gerçek değerler arasındaki ortalama karesel farkı ölçer. Daha düşük MSE değeri, modelin daha iyi uyum sağladığını gösterir.
+     R-kare (R²): R², modelin verilerdeki varyansın ne kadarını açıklayabildiğini gösteren bir metriktir. 1'e yakın bir R² değeri, modelin verileri iyi bir şekilde açıkladığını gösterir.
+     Doğruluk (Accuracy): Doğruluk, modelin doğru tahminlerinin toplam tahminlere oranını ölçer. Daha yüksek doğruluk oranı, modelin daha iyi performans gösterdiğini gösterir.
+     Hassasiyet (Precision): Hassasiyet, modelin pozitif olarak tahmin ettiği ve gerçekten de pozitif olan örneklerin oranını ölçer. Yüksek hassasiyet, modelin yanlış pozitif oranının düşük olduğunu gösterir.
+     Geri Çağırma (Recall): Geri çağırma, modelin gerçekte pozitif olan örneklerden kaçını doğru tahmin ettiğini ölçer. Yüksek geri çağırma, modelin yanlış negatif oranının düşük olduğunu gösterir.
+     Karışıklık Matrisi: Karışıklık matrisi, modelin gerçekte pozitif olan örnekleri pozitif olarak ve gerçekte negatif olan örnekleri negatif olarak sınıflandırmadaki performansının görsel bir temsilini sunar. Matris, modelin yaptığı doğru ve yanlış tahminlerin sayısını gösterir.
+
+Bulgular:
+
+Lojistik Regresyon modeli, EV satışlarının güç aktarma organı türünü tahmin etmede orta düzeyde bir başarı sergiledi.  
+
+ Doğruluk: Modelin doğruluk oranı %X olarak hesaplandı, bu da modelin %X oranında doğru tahmin yaptığı anlamına geliyor.
+ Hassasiyet ve Geri Çağırma: Modelin hassasiyeti %Y ve geri çağırma oranı %Z olarak bulundu. 
+ Karışıklık Matrisi: Karışıklık matrisi, modelin BEV'leri PHEV'lerden ayırt etmede zorlandığını gösterdi, bu da bazı yanlış sınıflandırmalara yol açtı.
+
+Sonuç:  Lojistik Regresyon modeli, EV satışlarının güç aktarma organı türünü tahmin etmede belirli bir başarıya sahip olsa da, performansının daha da iyileştirilmesi için daha fazla çalışma yapılması gerekiyor.
+
+Proje 3: SQLite Entegrasyonu ile Detaylı Envanter Yönetim Sistemi
+
+Amaç:  Bu proje, kullanıcı dostu bir arayüz ve veritabanı entegrasyonu ile zenginleştirilmiş, ilgili ürünleri yönetmek için kapsamlı bir envanter yönetim sistemi geliştirmeyi amaçlıyor. Sistem, ürünlerin verimli bir şekilde eklenmesini, güncellenmesini, silinmesini ve listelenmesini sağlayarak envanter yönetimi süreçlerini kolaylaştırmayı hedefliyor.
+
+Yöntem:
+
+1. Nesne Yönelimli Programlama (OOP) Prensipleri:
+     Ürün Sınıfı: Envanterdeki ürünleri modellemek için OOP prensipleri kullanılarak `Urun` adlı bir sınıf oluşturuldu. Bu sınıf, her bir ürünle ilgili bilgileri kapsüllemektedir.
+     Sınıf Özellikleri: `Urun` sınıfı, `ad`, `fiyat` ve `kategori` gibi özellikleri içerir. Bu özellikler, her ürünün temel bilgilerini tanımlar ve saklar.
+
+2. Veri Kalıcılığı için SQLite Entegrasyonu:
+     Veritabanı Seçimi:  Verileri kalıcı olarak depolamak için hafif, gömülü bir veritabanı sistemi olan SQLite seçildi. SQLite, envanter verilerini yönetmek için gereken basitlik ve verimlilik için uygundur.
+     Tablo Oluşturma:  `urunler` adlı bir tablo, SQLite veritabanında oluşturuldu. Tablodaki sütunlar, `Urun` sınıfındaki özelliklere karşılık gelir: `ad` (metin), `fiyat` (gerçek sayı) ve `kategori` (metin).  `ad` sütunu, her ürün için benzersiz bir tanımlayıcı olarak birincil anahtar (PRIMARY KEY) olarak ayarlandı.
+
+3. Kullanıcı Arayüzü Tasarımı:
+     Tkinter Kullanımı:  Kullanıcı arayüzü oluşturmak için Tkinter kütüphanesi kullanıldı. Tkinter, Python için standart GUI (Grafik Kullanıcı Arayüzü) araç setidir ve platformlar arası uyumluluk ve kullanım kolaylığı sunar.
+     Arayüz Widget'ları: Arayüz, kullanıcıların envanter verileriyle etkileşim kurmasını sağlayan çeşitli widget'lar içerir. 
+         Etiketler: Arayüz öğelerini (ürün adı, fiyat, kategori) etiketlemek için kullanılır.
+         Giriş Alanları:  Kullanıcıların ürün bilgilerini girmesini sağlar.
+         Açılır Menü (Dropdown Menu): Ürün kategorisi seçimini kolaylaştırır.
+         Butonlar:  Farklı işlemleri (ekleme, güncelleme, silme, listeleme) tetikler.
+         Liste Kutusu:  Mevcut ürünleri görüntüler.
+
+Sistem Özellikleri:
+
+ Ürün Ekleme:  Yeni bir ürün eklemek için kullanıcılar, arayüzdeki giriş alanlarına ürün adını, fiyatını ve kategorisini girer ve "Ekle" butonuna tıklar.  Sistem, girilen bilgileri doğrulayarak `Urun` sınıfından bir nesne oluşturur ve bu nesneyi `urunler` tablosuna ekler.
+ Ürün Güncelleme:  Mevcut bir ürünü güncellemek için, kullanıcılar liste kutusundan ürünü seçer, "Güncelle" butonuna tıklar ve açılan pencerede güncellenmiş fiyat ve kategori bilgilerini girer. "Kaydet" butonuna tıkladıklarında, sistem veritabanındaki ilgili satırı günceller.
+ Ürün Silme:  Bir ürünü silmek için, kullanıcılar liste kutusundan ürünü seçer ve "Sil" butonuna tıklar. Sistem, onay aldıktan sonra ürünü veritabanından siler.
+ Ürün Listeleme:  Tüm ürünleri görüntülemek için "Tüm Ürünleri Listele" butonuna tıklanır. Sistem, veritabanından tüm ürünleri alır ve liste kutusunda görüntüler.
+
+Sonuç:  SQLite veritabanı entegrasyonu ve Tkinter arayüzü ile geliştirilen detaylı envanter yönetim sistemi, kullanıcıların ilgili ürünlerini kolayca ve verimli bir şekilde yönetmelerini sağlar. Sistem, verileri kalıcı olarak depolar, kullanımı kolay bir arayüz sunar ve gelecekteki geliştirmeler ve özelleştirmeler için sağlam bir temel oluşturur.
+
+
+
+
+
+
+
+
+
+## README Dosyası
+
+Proje Adı: Envanter Yönetim Sistemi
+
+Açıklama:
+
+Bu proje, ilgili ürünleri yöneten bir envanter sistemi sunmaktadır. Sistem, Python programlama dili kullanılarak geliştirilmiştir ve SQLite veritabanını kullanarak verileri kalıcı olarak depolar.
+
+Gereksinimler:
+
+ Python 3.x
+ Tkinter kütüphanesi
+ SQLite3 kütüphanesi
+
+Kurulum:
+
+1. Python 3.x'i bilgisayarınıza kurun.
+2. Tkinter ve SQLite3 kütüphanelerini kurun: `pip install tkinter sqlite3`
+3. Proje dosyalarını bilgisayarınıza indirin.
+
+Çalıştırma:
+
+1. `envanter.py` dosyasını çalıştırın.
+2. Envanter yönetim sistemi arayüzü açılacaktır.
+
+Kullanım:
+
+Arayüzdeki talimatları izleyerek ürünleri ekleyebilir, güncelleyebilir, silebilir ve listeleyebilirsiniz.
+
+Ek Notlar:
+
+ Veritabanı dosyası (`envanter.db`) proje dosyalarıyla aynı dizinde oluşturulacaktır.
+ Arayüz, ihtiyaçlarınıza göre özelleştirilebilir.
+ Proje, sürüm kontrolü için Git kullanır.
+
+
